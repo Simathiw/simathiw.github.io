@@ -1,0 +1,134 @@
+.game-body{
+    width: 30rem;
+    min-height: 26.25rem;
+    margin: auto;
+    position: relative;
+}
+.game-body__circle-container-paper{
+    position: absolute;
+    left: 0;
+    top: -6.5rem;
+}
+.game-body__circle-container-scissors{
+    position: absolute;
+    right: 0;
+    top: -6.5rem;
+}
+.game-body__circle-container-rock{
+    position: absolute;
+    left: 50%;
+    bottom: 6rem;
+    transform: translateX(-50%);
+}
+.game-body__circle-container-paper,
+.game-body__circle-container-scissors,
+.game-body__circle-container-rock{
+    transition: all 0.5s ease-in-out;
+}
+.game-body__big-circle{
+    width: 13rem;
+    height: 13rem;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 25%);
+}
+.game-body__big-circle--dark-blue{
+    background-color: #2642bf;
+}
+.game-body__big-circle--dark-yellow{
+    background-color: #c76b18;
+}
+.game-body__big-circle--dark-red{
+    background-color: #9d1736;
+}
+.game-body__big-circle--light-blue,
+.game-body__big-circle--light-yellow,
+.game-body__big-circle--light-red{
+    transform: translateY(-6px) scale(1.03);
+}
+.game-body__big-circle--light-blue{
+    background-image: linear-gradient(120deg, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+}
+.game-body__big-circle--light-yellow{
+    background-image: linear-gradient(120deg, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+}
+.game-body__big-circle--light-red{
+    background-image: linear-gradient(120deg, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+}
+.game-body__tiny-circle{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+.game-body__tiny-circle--dark-white{
+    background-color: #bfbfbf;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.game-body__tiny-circle--light-white{
+    background-color: #ddd;
+    transform: translateY(4px) scale(1.02);
+}
+
+@media only screen and (min-width: 900px) {
+    .game-body{
+        width: 45rem;
+        min-height: 39rem;
+    }
+    .game-body__big-circle{
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        width: 19rem;
+        height: 19rem;
+    }
+    .game-body__tiny-circle{
+        width: 14.5rem;
+        height: 14.5rem;
+        border-radius: 50%;
+    }
+    .game-body__big-circle--s4{
+        width: 25rem;
+        height: 25rem;
+    }
+    .game-body__tiny-circle--s4{
+        width: 20rem;
+        height: 20rem;
+    }
+    .game-body__circle-container-paper{
+        top: -8rem;
+    }
+    .game-body__circle-container-scissors{
+        top: -8rem;
+    }
+    .game-body__circle-container-rock{
+        position: absolute;
+        left: 50%;
+        bottom: 8rem;
+        transform: translateX(-50%);
+    }
+    .rules-btn{
+        margin: -7rem 3rem 4rem auto;
+    }
+    .content-icon{
+        transform: translate(-50%, -50%) scale(1.75);
+    }
+    .game-body__big-circle:hover{
+        transform: scale(1.09) translateY(-5px);
+    }
+    .game-body__tiny-circle--light-white{
+        background-color: #ddd;
+        transform: translateY(7px) scale(1.02);
+    }
+    .game-body__big-circle--light-blue,
+    .game-body__big-circle--light-yellow,
+    .game-body__big-circle--light-red{
+        transform: translateY(-9px) scale(1.03);
+    }
+}

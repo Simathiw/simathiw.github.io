@@ -1,0 +1,87 @@
+.header {
+    padding: 50px;
+    text-align: center;
+    background-color: black;
+    background-image: url("Bilder/fragments.jpeg");
+    background-size: 80% 1050%;
+    color: white;
+  }
+  
+  .header h1 {
+    font-size: 50px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  h1 {
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .om {
+    text-align: center;
+    padding: 15px;
+  }
+
+  .trippeldans {
+    background-color: rgba(232, 228, 228, 0.678);
+    padding-top: 10px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+  }
+
+  .skoler {
+    text-align: center;
+    padding-top: 10px;
+  }
+  .skoler img {
+    height: 200px;
+    padding: 55px;
+    margin-left: auto;
+  }
+  
+  #høyrebilde {
+    float: right;
+    height: 200px;
+    padding-right: 10px;
+    padding-left: 20px;
+  }
+
+  #venstrebilde {
+    float: left;
+    height: 150px;
+    padding: 10px;
+    padding-right: 20px;
+  }
+
+  .walk {
+    background-color: rgba(232, 228, 228, 0.678);
+    padding-top: 10px;
+  }
+
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: black;
+    background-image: url("Bilder/fragments.jpeg");
+    background-size: 80% 1050%;
+    color: white;
+  }
+
+  .grå {
+    background-color: rgba(232, 228, 228, 0.678);
+    padding-top: 10px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+  }
+  .hvit {
+    padding-top: 10px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+  }

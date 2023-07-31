@@ -1,0 +1,13 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+img {
+    max-height: 50%;
+    border: 5px solid black;
+}
+.center {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+}

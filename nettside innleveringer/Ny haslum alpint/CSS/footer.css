@@ -1,0 +1,63 @@
+.sponsor {
+    margin-left: 5%;
+}
+
+.sponsor > img {
+    height: 150px;
+    margin: 30px;
+}
+
+.foot {
+    background-color: #c50507;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 5% 65px 5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.footBtn {
+    background-color: #fff;
+    color: #c50507;
+    font-weight: bolder;
+}
+
+.venstre {
+    display: flex;
+    flex-direction: column;
+}
+
+.flogo {
+    cursor: pointer;
+    margin-right: auto;
+    display: flex;
+    justify-content: flex-start;
+    color: #edf0f1;
+    margin-bottom: 0;
+}
+
+.flogo > img {
+    height: 85px;
+    align-items: center;
+}
+
+.logo > h1 {
+    padding-top: 30px;
+}
+
+.kontakt {
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.kontakt i {
+    display: flex;
+    align-items: center;
+}
+
+#telefon, #mail, #adresse, a {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0 10px 15px;
+}
