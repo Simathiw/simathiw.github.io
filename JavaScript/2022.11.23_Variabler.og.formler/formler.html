@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #overskrift {
+                border: 2px solid black;
+                padding: 20px;
+                background-color: rgba(179, 179, 179, 0.333)
+            }
+        </style>
+    </head>
+    <body>
+        <h1>JavaScript</h1>
+
+        <h2 id="overskrift"></h2>
+
+        <p id="lengde"></p>
+        <p id="bredde"></p>
+        <p id="areal"></p>
+
+        <script>
+            //Dette skrives til konsoll
+            console.log("Dette skrives i konsollen")
+
+            /* document.write("Dette er skrevet med JavaScript <br>") */
+
+            let overskriftEl = document.getElementById("overskrift")
+
+            console.log("overskriftEL")
+
+            overskriftEl.innerText = "Rektangel"
+
+            let l = 8.5 //lengde
+            let b = 2.1 //bredde
+
+            let A = l*b //areal
+            
+            let lengdeEL = document.getElementById("lengde")
+            let breddeEL = document.getElementById("bredde")
+            let arealEL = document.getElementById("areal")
+
+            console.log(lengdeEL)
+            console.log(breddeEL)
+            console.log(arealEL)
+
+            lengdeEL.innerText = "Lengden er " + l + " cm"
+            breddeEL.innerText = "Bredden er " + b + " cm"
+            arealEL.innerText = "Arealet er " + A + " cm²"
+        </script>
+    </body>
+</html>

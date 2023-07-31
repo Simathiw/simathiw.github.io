@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Omkrets</title>
+    </head>
+    <body>
+        <h1>Omkrets av et rektangel</h1>
+
+        <p id="lengde"></p>
+        <p id="bredde"></p>
+        <p id="omkrets"></p>
+
+        <script>
+            let l = 4 //Lengde
+            let b = 5 //Bredde
+            let o = l*b //Omkrets
+
+            let lengdeEL = document.getElementById(lengde)
+            let breddeEL = document.getElementById(bredde)
+            let omkretsEL = document.getElementById(omkrets)
+
+            console.log(lengdeEL)
+            console.log(breddeEL)
+            console.log(omkretsEL)
+
+            lengdeEL.innerText = "Lengden er " + l + " cm"
+            breddeEL.innerText = "Bredden er " + b + " cm"
+            omkretsEL.innerText = "Omkretsen er " + o + " cm"
+        </script>
+    </body>
+</html>

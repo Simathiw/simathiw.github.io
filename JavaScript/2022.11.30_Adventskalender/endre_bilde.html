@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+    <html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Endre bilde</title>
+
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            #door {
+                width: 300px;
+                height: 670px;
+                object-fit: cover;
+
+                cursor: pointer;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Trykk på døra!</h1>
+
+        <img id="door" src="door.jpeg" alt="Bilde av en dør">
+
+    <script>
+        //Kunne eventuelt brukt getElementById
+        let doorEl = document.querySelector("#door")
+        doorEl.addEventListener ('click', open)
+
+        let tall = 1
+        var remainder
+
+        function open(){
+            console.log('Åpner døra')
+            doorEl.src = "christmas.jpeg"
+            tall += 1
+            remainder = tall % 2
+
+            if (remainder == 1) {
+                doorEl.src = "door.jpeg"
+            }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+            /* Andre mulighteter for å lukke døra:
+            doorEl.classlist.toggle('show')
+            doorEl.style.display = "none" */
+        }
+    
+    </script>
+    </body>
+</html>

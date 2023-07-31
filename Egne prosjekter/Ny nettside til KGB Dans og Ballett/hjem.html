@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KGB Dans og Ballett I Hjem</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="hjem.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div>
+            <img class="logo" src="./bilder/KGB_logo.jpg" alt="LOGO" href="hjem.html">
+        </div>
+        <ul class="nav-list" id="navi-list">
+            <li class="list-item">
+                <a href="#">Hjem</a>
+            </li>
+            <li class="list-item">
+                <a href="#">Oppslagstavlen</a>
+            </li>
+            <li class="list-item">
+                <a href="#">Om oss</a>
+            </li>   
+            <li class="list-item">
+                <a href="#">Kurs/timeplan</a>
+            </li>
+            <li class="list-item">
+                <a href="#">Forestillinger/aktiviteter</a>
+            </li>
+            <li class="list-item">
+                <a href="#">Kontakt oss</a>
+            </li>
+        </ul>
+        <div class="menu" id="toggle-button">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+    </nav>
+    <main>
+        <div class="øverst">
+            <div class="nyheter">
+                <h2>NY TIMEPLAN</h2>
+                <p>Ny timeplan for våren 2023 er klar, og påmeldingen til kursene er åpnet.</p>
+                <button><a href="påmelding.html">Klikk her for påmelding</a></button>
+                <p>Siste semesteruke er uke 49, og siste lørdagsundervisning er 3. desember.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script>
+    const toggleButton = document.getElementById ('toggle-button');
+    const naviList = document.getElementById ('navi-list');
+     
+      toggleButton.addEventListener('click', () => {
+        naviList.classList.toggle('active');
+      })
+</script>
+</html> 
