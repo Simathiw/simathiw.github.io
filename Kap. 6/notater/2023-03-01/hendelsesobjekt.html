@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hendelsesobjekt</title>
+
+    <style>
+        body {
+            text-align: center;
+        }
+
+        #doorContainer {
+            display: flex;
+            justify-content: center;
+        }
+        .door {
+            width: 120px;
+            height: 180px;
+            margin: 20px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            border: 2px solid black;
+            border-radius: 10px;
+            
+            cursor: pointer;
+            font-size: 70px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hendelsesobjekt</h1>
+
+    <div id="doorContainer">
+        <div class="door" id="door1">
+            1
+        </div>
+        <div class="door" id="door2">
+            2
+        </div>
+        <div class="door" id="door3">
+            3
+        </div>
+    </div>
+
+    <script>
+        // Henter elementer fra DOM
+        let doorEls = document.querySelectorAll(`.door`)
+
+        for(let i=0; i<doorEls.length; i++){
+            doorEls[i].addEventListener("click", chooseDoor)
+        }
+
+        function chooseDoor(e){
+            // e er hendelsesobjektet
+            console.log(e)
+            console.log(e.target)
+            console.log(e.target.id)
+        }
+    </script>
+</body>
+</html>

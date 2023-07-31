@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navbar</title>
+
+        <style>
+            body{
+                margin: 0;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            .logo {
+                display: flex;
+                font-weight: bold;
+                font-size: 20px;
+                background-color: rgb(150, 0, 0);
+            }
+
+            .nav {
+                padding: 20px 10px;
+                width: fit-content;
+            }
+
+            .navbar {
+                background-color: rgb(0, 0, 0);
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .navbar a {
+                color: white;
+                text-decoration: none;
+                padding: 20px 10px;
+                flex: 1;
+                text-align: center;
+            }
+
+            .navbar a:hover {
+                background-color: rgb(0, 90, 0);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="logo">
+                <a href="#">LOGO</a>
+            </div>
+            <div class="nav">
+                <a href="#">Lenke 1</a>
+                <a href="#">Lenke 2</a>
+                <a href="#">Lenke 3</a>
+                <a href="#">Lenke 4</a>
+            </div>
+        </div>
+    </body>
+</html>

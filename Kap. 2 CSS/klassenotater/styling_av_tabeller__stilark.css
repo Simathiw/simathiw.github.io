@@ -1,0 +1,41 @@
+.sentrert {
+    text-align: center;
+}
+
+table {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-collapse: collapse;
+    font-size: 18px;
+    margin: 20px auto;
+}
+
+th, td {
+    border: 2px solid black;
+    padding: 5px;
+}
+
+thead {
+    background-color: lightgreen;
+}
+
+tbody tr {
+    background-color: lightyellow;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: azure;
+}
+
+h1, h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h2 + p {
+    /* påvirker første p element etter et h2 element */
+    font-style: italic;
+}
+
+h2 ~ p {
+    /* Påvirker alle p-elementer etter et h2 element*/    
+    font-family: Arial, Helvetica, sans-serif;
+}

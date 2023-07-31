@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <title>skjemaer</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Skjemaer</h1>
+        <h3>Regestrringsskjema</h3>
+
+        <form action="registrer.html">
+        <label for="navn">Navn</label>
+        <input type="text" id="navn" required placeholder="Name">
+
+        <br><br>
+
+        <label for="alder">Alder</label>
+        <input type="number" id="alder" required placeholder="Age" min="0" max="100">
+
+        <br><br>
+
+        <label for="farge">Favorittfarge</label>
+        <input type="color" id="farge" required placeholder="colour">
+
+        <br><br>
+
+        <label for="">Hvordan føler du deg</label>
+        <input type="range"> 100
+
+        <br><br>
+
+        <label for="dato">Fødselsdatoen din</label>
+        <input type="date" id="dato" required placeholder="date">
+
+        <br><br>
+
+        <label for="fornøyd">Er du fornøyd med dette skjemaet</label>
+        <input type="radio" id="ja"> Ja
+        <input type="radio" id="nei"> Nei
+        
+        <br><br>
+
+        <button type="submit">registrer</button>
+        </form>
+    </body>
+</html>

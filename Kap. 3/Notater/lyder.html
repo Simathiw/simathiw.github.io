@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>lyder</title>
+        <style>
+            img {
+                height: 250px;
+                margin: 20px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lyder</h1>
+        <h2>Men kan lage lyder selv</h2>
+
+        <img src="../bilder/dog.jpeg" alt="bilde av en hund" onclick="ducument.getelementbyid('voff').play()">
+        <audio id="voff" src="../Lydfiler/Voff.mp3"></audio>
+
+        <img id="noise" src="../bilder/classroom.jpeg" alt="bilde av en katt" onclick="document.getelementbyid('noise').play()">
+        <audio src="../Lydfiler/bakgrunnstøy.mp3"></audio>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url("wLCK1T.webp");
+    
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgba(255, 255, 255);
+
+    border: 3px solid black;
+
+    width: 95%;
+    max-width: 500px;
+    margin: 47px auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+select {
+    font-size: 18px;
+    width: fit-content;
+}
+
+h1 {
+    font-size: 60px;
+    margin: 10px;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 30px;
+    margin: 5px;
+}
+
+button {
+    font-size: 20px;
+
+    margin: 20px;
+    padding: 5px;
+}

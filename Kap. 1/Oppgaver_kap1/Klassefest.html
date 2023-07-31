@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="NO">
+    <head>
+        <meta charset="UTF-8">
+        <title>Klassefest</title>
+    </head>
+    <body>
+        <h1>Klassefest registrering</h1>
+        <form action="../timer:notater/registrer.html">
+
+        <label for="navn">Navn</label>
+        <input type="text" id="navn" required placeholder="">
+
+        <br><br>
+
+        <label for="drikke">Hva vil du ha til å drikke</label>
+        <input type="radio" id="brus">Brus
+        <input type="radio" id="saft">Saft
+        <input type="radio" id="vann">Vann
+
+        <br><br>
+
+        <select name="VelgMat" required>
+            <option value="Hva vil du spise?">Hva vil du ha til å spise?</option>
+            <option value="pizza">pizza</option>
+            <option value="torsk">torsk</option>
+            <option value="taco">taco</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">registrer</button>
+        </form>
+    </body>
+</html>
