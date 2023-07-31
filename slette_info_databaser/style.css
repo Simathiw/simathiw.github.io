@@ -1,0 +1,23 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#nybruker {
+    display: flex;
+    flex-direction: column;
+}
+
+#nybruker input {
+    width: 200px;
+}
+
+#nybruker button {
+    width: 100px;
+    margin: 20px;
+}
+
+#nybruker * {
+    font-size: 16px;
+    margin: 5px;
+    padding: 5px;
+}
