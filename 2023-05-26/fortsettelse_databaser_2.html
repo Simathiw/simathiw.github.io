@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #nybruker {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #nybruker input {
+            width: 200px;
+        }
+
+        #nybruker button {
+            width: 100px;
+            margin: 20px;
+        }
+
+        #nybruker * {
+            font-size: 16px;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+
+    <title>Databaser</title>
+</head>
+
+<body>
+    <h1>Introduksjon til databaser</h1>
+
+    <div id="nybruker">
+        <label for="fornavn">Fornavn</label>
+        <input type="text" id="fornavn">
+
+        <label for="etternavn">Etternavn</label>
+        <input type="text" id="etternavn">
+
+        <label for="epost">E-post</label>
+        <input type="email" id="epost">
+
+        <button id="registrer">
+            Registrer
+        </button>
+    </div>
+
+    <div id="hoved">
+        <!-- Informasjon fra databasen kommer her -->
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+
+
+    <script>
+        // Din Firebase config
+        const firebaseConfig = {
+            // Fyll inn her
+            apiKey: "AIzaSyBQa4wFHgTPhoYuWpViTISRNwWyITxudqM",
+            authDomain: "opplaering-148b7.firebaseapp.com",
+            projectId: "opplaering-148b7",
+            storageBucket: "opplaering-148b7.appspot.com",
+            messagingSenderId: "708397871443",
+            appId: "1:708397871443:web:49bfffb82dfa8ace5631a6"
+        };
+
+        // Initialiserer Firebase
+        firebase.initializeApp(firebaseConfig)
+
+        // Lager en referanse til databasen
+        let db = firebase.firestore()
+
+        // Elementer fra DOM
+        let hovedEl = document.getElementById("hoved")
+        let fornavnEl = document.getElementById("fornavn")
+        let etternavnEl = document.getElementById("etternavn")
+        let epostEl = document.getElementById("epost")
+        let registrerBtn = document.getElementById("registrer")
+
+        // Legger til lytter til knappen
+        registrerBtn.addEventListener("click", addUser)
+
+        // Navn på kolleksjonen vår
+        let collectionName = "brukere"
+
+        // Funksjon som legger ny bruker i databasen
+        function addUser() {
+            console.log("Legger bruker til i databasen")
+
+            /* Sjekk som undersøker om det står noe i de ulike input-elementene. 
+            Det skal kun være mulig å legge til en bruker dersom alle feltene er fylt ut.
+            Hvis noe mangler skal brukeren få beskjed om dette.
+            */
+
+            // Lager objekt for personen
+            let person = {
+                fornavn: fornavnEl.value,
+                etternavn: etternavnEl.value,
+                epost: epostEl.value
+            }
+
+            console.log(person)
+
+            // Legger personen i databasen
+            db.collection(collectionName).add(person)
+
+            alert("Brukeren er lagt til i databasen")
+
+            fornavnEl.value = ""
+            etternavnEl.value = ""
+            epostEl.value = ""
+
+        }
+
+        // Funksjon som henter brukere og skriver dette til nettsiden (bruk gjerne div med id="hoved")
+        function getUsers() {
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

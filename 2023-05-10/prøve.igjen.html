@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huskeliste 2</title>
+</head>
+
+<body>
+    <h1>Huskeliste</h1>
+
+    <script>
+
+        // Henter data. Når dataene er ferdig hentet, starter "then"-biten
+        db.collection("handleliste").get().then((snapshot) => {
+            // Henter ut dokumentene
+            let dokumenter = snapshot.docs;
+
+
+            // Går gjennom dokumentene og sender dem videre
+            for (let i = 0; i < dokumenter.length; i++) { visHuskeElement(dokumenter[i]); }
+        }); 
+
+    </script>
+ </body>
+</html>

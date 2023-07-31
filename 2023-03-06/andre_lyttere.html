@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andre lyttere</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h2 {
+            margin: 5px;
+        }
+        #boks {
+            width: 500px;
+            height: 500px;
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Finn posisjonen</h1>
+    <h2 id="x">x-posisjon: 100</h2>
+    <h2 id="y">y-posisjon: 200</h2>
+    <h2 id="fasit"></h2>
+    <h2 id="poeng"></h2>
+
+    <div id="boks"></div>
+
+
+
+
+
+    <h2 id="key">keyCode: </h2>
+    
+    <script>
+        let boksEl = document.querySelector(`#boks`)
+        let fasitEl = document.querySelector(`#fasit`)
+        let xEl = document.querySelector(`#x`)
+        let yEl = document.querySelector(`#y`)
+        let poengEl = document.querySelector(`#poeng`)
+        /* boksEl.addEventListener(`mousemove`, finnPosisjon) */
+        boksEl.addEventListener(`click`, finnPunkt)
+
+        xEl = Math.floor(Math.random()*500)
+        yEl = Math.floor(Math.random()*500)
+
+        /* xEl.innerHTML = `x-posisjon: ${xEl}`
+        yEl.innerHTML = `y-posisjon: ${yEl}` */
+
+        console.log(xEl)
+        console.log(yEl)
+        
+        /* function finnPosisjon(e){
+            console.log(e.offsetX, e.offsetY)
+        } */
+        
+        function finnPunkt(e){
+            if (e.offsetX === xEl, e.offsetY === yEl){
+                console.log(`Bra jobbet!`)
+                fasitEl.innerHTML = `Bra jobbet, du fant riktig koordinat`
+            }
+            else {
+                console.log(`Du klikket på koordinatene (${e.offsetX}, ${e.offsetY})`)
+                fasitEl.innerHTML = `Prøv igjen, du klikket på koordinatet (${e.offsetX}, ${e.offsetY})`
+            }
+
+
+            poeng = (1000 - (e.offsetX + e.offsetY))/10
+            poengEl.innerHTML = `Du fikk ${poeng} poeng`
+        }
+        
+
+
+
+
+
+        let bodyEl = document.querySelector(`body`)
+        let keyEl = document.querySelector(`#key`)
+
+        bodyEl.addEventListener(`keydown`, finnTast)
+
+        function finnTast(e){
+            console.log(e.key, e.keyCode, e.code)
+
+            keyEl.innerHTML = `keyCode: ${e.keyCode}`
+        }
+    </script>
+</body>
+</html>

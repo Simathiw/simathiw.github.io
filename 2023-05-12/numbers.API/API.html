@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Facts</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 40px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #number {
+            font-size: 50px;
+            width: 40%;
+            padding: 10px;
+            cursor: pointer;
+        }
+        #dropDown {
+            width: 20.6%;
+            margin: 10px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+        button {
+            width: 13%;
+            margin: 10px;
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-radius: 5px;
+            border: rgba(65, 65, 65, 0.615) solid;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Number Facts</h1>
+        <h3>Click the button to get facts about a specific number</h3>
+        <input type="number" id="numberImput">
+        <select id="dropDown">
+            <option value= "" selected>Trivia</option>
+            <option value="math">Math</option>
+            <option value="year">Year</option>
+        </select>
+        <button>Get Fact</button>
+        <h5 id="fact">Number fact</h5>
+    </div>
+
+    <script>
+        // Get element from DOM
+        let numberEl = document.getElementById(`numberImput`)
+        let dropDownEl = document.getElementById(`dropDown`)
+        let factEl = document.getElementById(`fact`)
+        let buttonEl = document.querySelector(`button`)
+
+        buttonEl.addEventListener(`click`, getFact)
+
+        async function getFact(){
+            let number = numberEl.value
+            let topic = ""
+
+            for(let i=0; i<dropDownEl.children.length; i++){
+                if(dropDownEl.children[i].selected){
+                    topic = dropDownEl.children[i].value
+                    console.log(topic)
+                }
+            }
+
+            let url = `http://numbersapi.com/${number}/${topic}?json`
+
+            let response = await fetch(url)
+
+            let data = await response.json()
+
+            factEl.innerHTML = data.text
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huskeliste</title>
+</head>
+
+<body>
+    <h1>Huskeliste</h1>
+
+    <div id="huskeliste">
+
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+
+    <script>
+let huskelisteEl = document.getElementById(`huskeliste`)
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBQa4wFHgTPhoYuWpViTISRNwWyITxudqM",
+            authDomain: "opplaering-148b7.firebaseapp.com",
+            projectId: "opplaering-148b7",
+            storageBucket: "opplaering-148b7.appspot.com",
+            messagingSenderId: "708397871443",
+            appId: "1:708397871443:web:49bfffb82dfa8ace5631a6"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Lager en referanse til databasen
+        let db = firebase.firestore();
+
+        // Henter data. Når dataene er ferdig hentet, starter "then"-biten
+        db.collection("Huskeliste").get().then((snapshot) => {
+            // Henter ut dokumentene
+            let dokumenter = snapshot.docs;
+            // Skriver dokumentene til konsollen
+            console.log(dokumenter);
+
+            console.log(dokumenter[1].data().husketekst)
+
+            for(let i=0; i<dokumenter.length; i++){
+                let husketekst = dokumenter[i].data().husketekst
+
+                huskelisteEl.innerHTML += `<p> - ${husketekst}</p>`
+            }
+        });
+    </script>
+</body>
+
+</html>
